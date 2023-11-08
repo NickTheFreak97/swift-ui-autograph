@@ -4,20 +4,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "Signature",
+    name: "Autograph",
+    platforms: [.iOS(SupportedPlatform.IOSVersion.v14)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Signature",
-            targets: ["Signature"]),
+            name: "Autograph",
+            targets: ["Autograph"]),
+    ],
+    dependencies: [
+        // temporary until in repo
+        .package(path: "../SwiftUIHelpers")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Signature"),
+            name: "Autograph",
+            dependencies: ["SwiftUIHelpers"]),
         .testTarget(
-            name: "SignatureTests",
-            dependencies: ["Signature"]),
+            name: "AutographTests",
+            dependencies: ["Autograph"]),
     ]
 )

@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B480DC9D2AF42C2300AAA875 /* Autograph in Frameworks */ = {isa = PBXBuildFile; productRef = B480DC9C2AF42C2300AAA875 /* Autograph */; };
+		B4E0C5862AE1A514003EFBD7 /* AutographDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0C5852AE1A514003EFBD7 /* AutographDemoApp.swift */; };
+		B4E0C5882AE1A514003EFBD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0C5872AE1A514003EFBD7 /* ContentView.swift */; };
+		B4E0C58A2AE1A516003EFBD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E0C5892AE1A516003EFBD7 /* Assets.xcassets */; };
+		B4E0C58E2AE1A516003EFBD7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E0C58D2AE1A516003EFBD7 /* Preview Assets.xcassets */; };
+		B4E0C5982AE1A516003EFBD7 /* AutographDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0C5972AE1A516003EFBD7 /* AutographDemoTests.swift */; };
+		B4E0C5A22AE1A516003EFBD7 /* AutographDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0C5A12AE1A516003EFBD7 /* AutographDemoUITests.swift */; };
+		B4E0C5A42AE1A516003EFBD7 /* AutographDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0C5A32AE1A516003EFBD7 /* AutographDemoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4E0C5942AE1A516003EFBD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4E0C57A2AE1A514003EFBD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4E0C5812AE1A514003EFBD7;
+			remoteInfo = SignatureDemo;
+		};
+		B4E0C59E2AE1A516003EFBD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4E0C57A2AE1A514003EFBD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4E0C5812AE1A514003EFBD7;
+			remoteInfo = SignatureDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B4E0C5822AE1A514003EFBD7 /* AutographDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutographDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E0C5852AE1A514003EFBD7 /* AutographDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutographDemoApp.swift; sourceTree = "<group>"; };
+		B4E0C5872AE1A514003EFBD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B4E0C5892AE1A516003EFBD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4E0C58D2AE1A516003EFBD7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B4E0C5932AE1A516003EFBD7 /* AutographDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutographDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E0C5972AE1A516003EFBD7 /* AutographDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutographDemoTests.swift; sourceTree = "<group>"; };
+		B4E0C59D2AE1A516003EFBD7 /* AutographDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutographDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E0C5A12AE1A516003EFBD7 /* AutographDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutographDemoUITests.swift; sourceTree = "<group>"; };
+		B4E0C5A32AE1A516003EFBD7 /* AutographDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutographDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4E0C57F2AE1A514003EFBD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B480DC9D2AF42C2300AAA875 /* Autograph in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4E0C5902AE1A516003EFBD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4E0C59A2AE1A516003EFBD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4E0C5792AE1A514003EFBD7 = {
+			isa = PBXGroup;
+			children = (
+				B4E0C5842AE1A514003EFBD7 /* AutographDemo */,
+				B4E0C5962AE1A516003EFBD7 /* AutographDemoTests */,
+				B4E0C5A02AE1A516003EFBD7 /* AutographDemoUITests */,
+				B4E0C5832AE1A514003EFBD7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B4E0C5832AE1A514003EFBD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4E0C5822AE1A514003EFBD7 /* AutographDemo.app */,
+				B4E0C5932AE1A516003EFBD7 /* AutographDemoTests.xctest */,
+				B4E0C59D2AE1A516003EFBD7 /* AutographDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4E0C5842AE1A514003EFBD7 /* AutographDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B4E0C5852AE1A514003EFBD7 /* AutographDemoApp.swift */,
+				B4E0C5872AE1A514003EFBD7 /* ContentView.swift */,
+				B4E0C5892AE1A516003EFBD7 /* Assets.xcassets */,
+				B4E0C58C2AE1A516003EFBD7 /* Preview Content */,
+			);
+			path = AutographDemo;
+			sourceTree = "<group>";
+		};
+		B4E0C58C2AE1A516003EFBD7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B4E0C58D2AE1A516003EFBD7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B4E0C5962AE1A516003EFBD7 /* AutographDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4E0C5972AE1A516003EFBD7 /* AutographDemoTests.swift */,
+			);
+			path = AutographDemoTests;
+			sourceTree = "<group>";
+		};
+		B4E0C5A02AE1A516003EFBD7 /* AutographDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B4E0C5A12AE1A516003EFBD7 /* AutographDemoUITests.swift */,
+				B4E0C5A32AE1A516003EFBD7 /* AutographDemoUITestsLaunchTests.swift */,
+			);
+			path = AutographDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4E0C5812AE1A514003EFBD7 /* AutographDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4E0C5A72AE1A516003EFBD7 /* Build configuration list for PBXNativeTarget "AutographDemo" */;
+			buildPhases = (
+				B4E0C57E2AE1A514003EFBD7 /* Sources */,
+				B4E0C57F2AE1A514003EFBD7 /* Frameworks */,
+				B4E0C5802AE1A514003EFBD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutographDemo;
+			packageProductDependencies = (
+				B480DC9C2AF42C2300AAA875 /* Autograph */,
+			);
+			productName = SignatureDemo;
+			productReference = B4E0C5822AE1A514003EFBD7 /* AutographDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4E0C5922AE1A516003EFBD7 /* AutographDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4E0C5AA2AE1A516003EFBD7 /* Build configuration list for PBXNativeTarget "AutographDemoTests" */;
+			buildPhases = (
+				B4E0C58F2AE1A516003EFBD7 /* Sources */,
+				B4E0C5902AE1A516003EFBD7 /* Frameworks */,
+				B4E0C5912AE1A516003EFBD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4E0C5952AE1A516003EFBD7 /* PBXTargetDependency */,
+			);
+			name = AutographDemoTests;
+			productName = SignatureDemoTests;
+			productReference = B4E0C5932AE1A516003EFBD7 /* AutographDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B4E0C59C2AE1A516003EFBD7 /* AutographDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4E0C5AD2AE1A516003EFBD7 /* Build configuration list for PBXNativeTarget "AutographDemoUITests" */;
+			buildPhases = (
+				B4E0C5992AE1A516003EFBD7 /* Sources */,
+				B4E0C59A2AE1A516003EFBD7 /* Frameworks */,
+				B4E0C59B2AE1A516003EFBD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4E0C59F2AE1A516003EFBD7 /* PBXTargetDependency */,
+			);
+			name = AutographDemoUITests;
+			productName = SignatureDemoUITests;
+			productReference = B4E0C59D2AE1A516003EFBD7 /* AutographDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4E0C57A2AE1A514003EFBD7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					B4E0C5812AE1A514003EFBD7 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					B4E0C5922AE1A516003EFBD7 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = B4E0C5812AE1A514003EFBD7;
+					};
+					B4E0C59C2AE1A516003EFBD7 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = B4E0C5812AE1A514003EFBD7;
+					};
+				};
+			};
+			buildConfigurationList = B4E0C57D2AE1A514003EFBD7 /* Build configuration list for PBXProject "AutographDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4E0C5792AE1A514003EFBD7;
+			packageReferences = (
+				B480DC9B2AF42C2300AAA875 /* XCLocalSwiftPackageReference ".." */,
+			);
+			productRefGroup = B4E0C5832AE1A514003EFBD7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4E0C5812AE1A514003EFBD7 /* AutographDemo */,
+				B4E0C5922AE1A516003EFBD7 /* AutographDemoTests */,
+				B4E0C59C2AE1A516003EFBD7 /* AutographDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4E0C5802AE1A514003EFBD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4E0C58E2AE1A516003EFBD7 /* Preview Assets.xcassets in Resources */,
+				B4E0C58A2AE1A516003EFBD7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4E0C5912AE1A516003EFBD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4E0C59B2AE1A516003EFBD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4E0C57E2AE1A514003EFBD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4E0C5882AE1A514003EFBD7 /* ContentView.swift in Sources */,
+				B4E0C5862AE1A514003EFBD7 /* AutographDemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4E0C58F2AE1A516003EFBD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4E0C5982AE1A516003EFBD7 /* AutographDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4E0C5992AE1A516003EFBD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4E0C5A42AE1A516003EFBD7 /* AutographDemoUITestsLaunchTests.swift in Sources */,
+				B4E0C5A22AE1A516003EFBD7 /* AutographDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4E0C5952AE1A516003EFBD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4E0C5812AE1A514003EFBD7 /* AutographDemo */;
+			targetProxy = B4E0C5942AE1A516003EFBD7 /* PBXContainerItemProxy */;
+		};
+		B4E0C59F2AE1A516003EFBD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4E0C5812AE1A514003EFBD7 /* AutographDemo */;
+			targetProxy = B4E0C59E2AE1A516003EFBD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B4E0C5A52AE1A516003EFBD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B4E0C5A62AE1A516003EFBD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B4E0C5A82AE1A516003EFBD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AutographDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AutographDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4E0C5A92AE1A516003EFBD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AutographDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AutographDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B4E0C5AB2AE1A516003EFBD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SignatureDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutographDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AutographDemo";
+			};
+			name = Debug;
+		};
+		B4E0C5AC2AE1A516003EFBD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SignatureDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutographDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AutographDemo";
+			};
+			name = Release;
+		};
+		B4E0C5AE2AE1A516003EFBD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SignatureDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SignatureDemo;
+			};
+			name = Debug;
+		};
+		B4E0C5AF2AE1A516003EFBD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SignatureDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SignatureDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4E0C57D2AE1A514003EFBD7 /* Build configuration list for PBXProject "AutographDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4E0C5A52AE1A516003EFBD7 /* Debug */,
+				B4E0C5A62AE1A516003EFBD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4E0C5A72AE1A516003EFBD7 /* Build configuration list for PBXNativeTarget "AutographDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4E0C5A82AE1A516003EFBD7 /* Debug */,
+				B4E0C5A92AE1A516003EFBD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4E0C5AA2AE1A516003EFBD7 /* Build configuration list for PBXNativeTarget "AutographDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4E0C5AB2AE1A516003EFBD7 /* Debug */,
+				B4E0C5AC2AE1A516003EFBD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4E0C5AD2AE1A516003EFBD7 /* Build configuration list for PBXNativeTarget "AutographDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4E0C5AE2AE1A516003EFBD7 /* Debug */,
+				B4E0C5AF2AE1A516003EFBD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		B480DC9B2AF42C2300AAA875 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B480DC9C2AF42C2300AAA875 /* Autograph */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Autograph;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B4E0C57A2AE1A514003EFBD7 /* Project object */;
+}

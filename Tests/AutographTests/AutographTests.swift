@@ -1,7 +1,7 @@
 import XCTest
-@testable import Signature
+@testable import Autograph
 
-final class SignatureTests: XCTestCase {
+final class AutographTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest
