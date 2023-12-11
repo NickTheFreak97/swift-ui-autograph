@@ -13,8 +13,7 @@ let package = Package(
             targets: ["Autograph"]),
     ],
     dependencies: [
-        // temporary until in repo
-        .package(path: "https://github.com/jensmoes/swift-ui-helpers")
+        .package(url: "https://github.com/jensmoes/swift-ui-helpers", from: "0.0.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
