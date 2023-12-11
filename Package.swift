@@ -14,7 +14,7 @@ let package = Package(
     ],
     dependencies: [
         // temporary until in repo
-        .package(path: "../SwiftUIHelpers")
+        .package(path: "https://github.com/jensmoes/swift-ui-helpers")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
