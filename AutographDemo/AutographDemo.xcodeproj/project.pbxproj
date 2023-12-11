@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4447ACE2B27B8B2000789AA /* Autograph in Frameworks */ = {isa = PBXBuildFile; productRef = B4447ACD2B27B8B2000789AA /* Autograph */; };
+		B4447AD12B27CFCD000789AA /* Autograph in Frameworks */ = {isa = PBXBuildFile; productRef = B4447AD02B27CFCD000789AA /* Autograph */; };
+		B46FD3712B27D53B00613E65 /* Autograph in Frameworks */ = {isa = PBXBuildFile; productRef = B46FD3702B27D53B00613E65 /* Autograph */; };
 		B480DC9D2AF42C2300AAA875 /* Autograph in Frameworks */ = {isa = PBXBuildFile; productRef = B480DC9C2AF42C2300AAA875 /* Autograph */; };
 		B4E0C5862AE1A514003EFBD7 /* AutographDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0C5852AE1A514003EFBD7 /* AutographDemoApp.swift */; };
 		B4E0C5882AE1A514003EFBD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0C5872AE1A514003EFBD7 /* ContentView.swift */; };
@@ -52,7 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46FD3712B27D53B00613E65 /* Autograph in Frameworks */,
+				B4447ACE2B27B8B2000789AA /* Autograph in Frameworks */,
 				B480DC9D2AF42C2300AAA875 /* Autograph in Frameworks */,
+				B4447AD12B27CFCD000789AA /* Autograph in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +153,9 @@
 			name = AutographDemo;
 			packageProductDependencies = (
 				B480DC9C2AF42C2300AAA875 /* Autograph */,
+				B4447ACD2B27B8B2000789AA /* Autograph */,
+				B4447AD02B27CFCD000789AA /* Autograph */,
+				B46FD3702B27D53B00613E65 /* Autograph */,
 			);
 			productName = SignatureDemo;
 			productReference = B4E0C5822AE1A514003EFBD7 /* AutographDemo.app */;
@@ -221,6 +230,7 @@
 			);
 			mainGroup = B4E0C5792AE1A514003EFBD7;
 			packageReferences = (
+				B46FD36F2B27D53B00613E65 /* XCRemoteSwiftPackageReference "swift-ui-autograph" */,
 			);
 			productRefGroup = B4E0C5832AE1A514003EFBD7 /* Products */;
 			projectDirPath = "";
@@ -618,7 +628,31 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		B46FD36F2B27D53B00613E65 /* XCRemoteSwiftPackageReference "swift-ui-autograph" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jensmoes/swift-ui-autograph";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		B4447ACD2B27B8B2000789AA /* Autograph */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Autograph;
+		};
+		B4447AD02B27CFCD000789AA /* Autograph */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Autograph;
+		};
+		B46FD3702B27D53B00613E65 /* Autograph */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B46FD36F2B27D53B00613E65 /* XCRemoteSwiftPackageReference "swift-ui-autograph" */;
+			productName = Autograph;
+		};
 		B480DC9C2AF42C2300AAA875 /* Autograph */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Autograph;

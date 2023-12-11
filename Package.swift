@@ -13,14 +13,17 @@ let package = Package(
             targets: ["Autograph"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/jensmoes/swift-ui-helpers", from: "0.0.0")
+        .package(url: "https://github.com/jensmoes/swift-ui-helpers", .upToNextMajor(from: "0.0.1")),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Autograph",
-            dependencies: ["swift-ui-helpers"]),
+            dependencies: [
+                "swift-ui-helpers",
+            ]
+        ),
         .testTarget(
             name: "AutographTests",
             dependencies: ["Autograph"]),
