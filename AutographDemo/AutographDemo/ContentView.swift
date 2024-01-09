@@ -87,6 +87,7 @@ struct ContentView: View {
                 // Example of data capture.
                 let data = appData.autographData.normalized
                 print("\(data.count) strokes were made on canvas \(appData.autographData.canvasSize):")
+                print("SVG output is: \n\(appData.autographData.svg ?? "nil")")
             }
             .padding()
         }

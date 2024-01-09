@@ -36,7 +36,7 @@ public protocol Autographic: ObservableObject {
     /// Returns the strokes projected on to the current canvas
     /// Has a default implementation
     var projected : [[CGPoint]] {get}
-
+    
     // MARK: Data Input
 
     /// Current size of the canvas
@@ -121,12 +121,15 @@ public class AutoGraphData: Autographic {
     private var data = StrokesData()
     private var currentStroke: Int = 0
 
-
+    /// Get the current state as SVG
+    public var svg: String? {
+        return data.svg(on: canvasSize)
+    }
     // MARK: Initializers
 
     /// Creates an instance of the required data model with empty data
     /// - Parameter strokeData: Optional initial value if restoring view from stored data
-    public init(_ strokeData: StrokesData = StrokesData(strokes: [[CGPoint]()])) {
+    public init(_ strokeData: StrokesData = StrokesData(strokes: [])) {
         self.isEmpty = isEmpty
         self.isActive = isActive
         self.data = strokeData
