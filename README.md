@@ -1,11 +1,10 @@
 # swift-ui-autograph
 
 Swift Package providing a view for capturing a users signature/autograph using drag gestures.
-Curently it supports output in SVG format.
 
-Requires an instance conforming to the `Autographic` protocol for storing the input.
+Requires an instance conforming to the [`Autographic`](https://github.com/jensmoes/swift-ui-autograph/blob/main/Sources/Autograph/DataModel.swift#L11-L50) protocol for storing the input.
 
-You canuse the provided default implementation `AutoGraphData()` or provide a custom implementation.
+You can use the provided default implementation `AutoGraphData()` or provide a custom implementation.
 
 ```
 class MyAppData: ObservableObject {
@@ -29,4 +28,6 @@ var body: some View {
 }
 ```
 
-See the [Demo Project]([url](https://github.com/jensmoes/swift-ui-autograph/tree/main/AutographDemo)https://github.com/jensmoes/swift-ui-autograph/tree/main/AutographDemo) for more usage examples.
+Curently it supports [output in SVG format](https://github.com/jensmoes/swift-ui-autograph/blob/main/Sources/Autograph/DataModel.swift#L125)
+
+See the [Demo Project](https://github.com/jensmoes/swift-ui-autograph/tree/main/AutographDemo) for more usage examples.
