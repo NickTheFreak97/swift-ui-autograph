@@ -1,15 +1,40 @@
 //
-//  StrokesData+SVG.swift
+//
+//  Array+Path.swift
 //
 //
-//  Created by Jens Troest on 1/8/24.
+//  Created by jensmoes on 11/8/23.
 //
+
 
 import Foundation
+import SwiftUI
 
-/// Adds support for SVG output
-extension StrokesData {
+public extension Array where Element == [CGPoint] {
+    // MARK: Shape
     
+    /// Returns the [``Path``](https://developer.apple.com/documentation/swiftui/path) represented by the array
+    /// - Parameter canvas: The size of the canvas to scale to
+    func path(in canvas: CGSize) -> Path {
+        var result = Path()
+        // If there are none to return
+        if isEmpty {return result}
+        
+        let _ = forEach({ stroke in
+            guard let firstPoint = stroke.first else { return }
+            // Move to the first point of each stroke
+            result.move(to: firstPoint)
+            // Insert the rest
+            stroke[1...].forEach { point in
+                result.addLine(to: point)
+            }
+        })
+        
+        let transform = CGAffineTransform(scaleX: canvas.width, y: canvas.height)
+        return result.applying(transform)
+    }
+    
+    // MARK: SVG
     private var svgFooter: String {
         "</svg>\n"
     }
@@ -33,7 +58,6 @@ extension StrokesData {
     private var maxX: CGFloat {
         2
     }
-    
     /**
      Generates a string representation of the path as SVG
      - Parameters:
@@ -45,6 +69,9 @@ extension StrokesData {
     func svg(strokeWidth: CGFloat = 2,
              strokeColor: String = "black",
              on canvas: CGSize) -> String? {
+        
+        if isEmpty {return nil}
+        
         let xmlHeader = """
 <?xml version=\"1.0" encoding="UTF-8" standalone="no"?>
 
@@ -66,7 +93,7 @@ extension StrokesData {
         // Begin first path
 //        var path = pathHeader + move(to: firstPoint)
         
-        strokes.forEach { stroke in
+        forEach { stroke in
             if stroke.isEmpty {return} // Ignore empty
             var path = pathHeader + move(to: stroke.first!.applying(transform)) // Force unwrap OK
             // Add lines between the remaining points in the stroke
@@ -82,5 +109,6 @@ extension StrokesData {
         svg += svgFooter
         return svg
     }
+
 
 }

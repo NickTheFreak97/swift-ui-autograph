@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Autograph",
-    platforms: [.iOS(SupportedPlatform.IOSVersion.v14)],
+    platforms: [.iOS(SupportedPlatform.IOSVersion.v15)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -13,7 +13,7 @@ let package = Package(
             targets: ["Autograph"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/jensmoes/swift-ui-helpers", .upToNextMajor(from: "0.0.1")),
+        .package(url: "https://github.com/jensmoes/swift-ui-helpers", .upToNextMajor(from: "0.0.0")),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
