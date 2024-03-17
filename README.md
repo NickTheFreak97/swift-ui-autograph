@@ -54,6 +54,10 @@ To display the autograph in a view you can use the provided ``AutographShape`` i
 
 Since the view accepts the type ``Binding<[[CGPoint]]`` any [``Published``](https://developer.apple.com/documentation/combine/published) reference of that type can be used by accesing its binding with the `$` operator.
 
+## Documentation
+
+The latest documentation is [hosted here](https://jensmoes.github.io/swift-ui-autograph/documentation/autograph/autograph/)
+
 ## See also
 
 The [Demo Project](https://github.com/jensmoes/swift-ui-autograph/tree/main/AutographDemo) included in this package has usage examples based on a SwiftData model scheme, showing how to create and display autographs.

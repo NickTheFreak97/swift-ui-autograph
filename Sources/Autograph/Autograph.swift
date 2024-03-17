@@ -10,6 +10,12 @@ import SwiftUIHelpers
 
 public struct Autograph: View {
 
+    /// Initializer for the Autograph view.
+    /// - Parameter data: Provide the binding to the destination of the user input data (the autograph)
+    /// - Parameter canvasSize: If provided this will contain the size of the drawing canvas at any given time during the views lifecycle. Use this to capture the aspect ratio for any future reproduction of the data.
+    /// - Parameter isActive: If provided this will provide the user activity state of the view. It will be true while input is being actively recorded.
+    /// - Parameter strokeWidth: The displayed with of the strokes. Defaults to 2.0
+    /// - Parameter strokeColor: The color of the strokes. Defaults to black.
     public init(_ data: Binding<[[CGPoint]]>,
                 canvasSize: Binding<CGRect>? = nil,
                 isActive: Binding<Bool>? = nil,
@@ -22,6 +28,7 @@ public struct Autograph: View {
     }
     
     /// Adds a view under the created strokes.
+    /// - Parameter under: The view to display underneath the strokes. For example a dotted signature line, or a background.
     public func underlay<U: View>(@ViewBuilder under: @escaping () -> U) -> some View {
         ZStack {
             under()
@@ -143,8 +150,10 @@ public struct Autograph: View {
 
 }
 
-
+/// A [``Shape``](https://developer.apple.com/documentation/swiftui/shape) representing the autograph from captured data
 public struct AutographShape: Shape {
+    
+    /// - Parameter data: The strokes data to render
     public init(data: [[CGPoint]]) {
         self.data = data
     }
@@ -152,6 +161,8 @@ public struct AutographShape: Shape {
     /// The strokes
     let data: [[CGPoint]]
     
+    /// Created a [``Path``](https://developer.apple.com/documentation/swiftui/path) of the shape.
+    /// - Parameter rect: The [``CGRect``](9https://developer.apple.com/documentation/corefoundation/cgrect) for the path.
     public func path(in rect: CGRect) -> Path {
         return data.path(in: rect.size)
     }
@@ -159,7 +170,6 @@ public struct AutographShape: Shape {
     
 }
 
-
-//#Preview {
-//    Autograph(data: AutoGraphData())
-//}
+#Preview {
+    Autograph(.constant([]))
+}
