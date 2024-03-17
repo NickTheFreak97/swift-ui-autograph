@@ -32,7 +32,7 @@ jobs:
         run: |
           swift package resolve;
           
-          xcodebuild docbuild -scheme Autograph-Package -derivedDataPath /tmp/docbuild;
+          xcodebuild docbuild -scheme Autograph-Package -derivedDataPath /tmp/docbuild -destination 'platform=iOS Simulator,name=iPhone 15';
 
           echo "Archiving documentation..."
                     
