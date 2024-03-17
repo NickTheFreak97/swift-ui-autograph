@@ -37,7 +37,7 @@ jobs:
           echo "Archiving documentation..."
                     
           $(xcrun --find docc) process-archive \
-                      transform-for-static-hosting /tmp/docbuild/Build/Products/Debug-iphonesimulator/Autograph-Package.doccarchive \
+                      transform-for-static-hosting /tmp/docbuild/Build/Products/Debug-iphonesimulator/Autograph.doccarchive \
                       --output-path docs \
                       --hosting-base-path swift-ui-autograph;
                       
