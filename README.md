@@ -5,6 +5,7 @@ It is named autograph to avoid confusion with the overloaded word signature 😀
 
 ## Usage
 It accepts a [Binding](https://developer.apple.com/documentation/swiftui/binding) to list of strokes represented as ```[[CGPoint]]``` for storing the strokes.
+The points are in normalized form allowing for projection onto arbitrary canvas sizes.
 
 For example if using a [SwiftData](https://developer.apple.com/documentation/swiftdata) backed model
 ```
@@ -22,12 +23,7 @@ A ``View`` can be constructed consisting of
         
     ...
         if let autograph = autographs.first {
-            
-            Autograph(autograph)
-                      
-            Button("Print") {
-                print("SVG output is: \n\(autograph.svg(on: canvasSize) ?? "nil")")
-            }
+            Autograph($autograph.strokes)
         }
     ...
     }
@@ -37,14 +33,14 @@ A ``View`` can be constructed consisting of
 ## Output
 
 The package provides a simple SVG encoder as an extension to ``[[CGPoint]]``.
-This can be used by calling ``svg(strokeWidth:strokeColor:on:)``
+This can be used by calling ``svg(strokeWidth:strokeColor:on:)`` providing a [CGSize](https://developer.apple.com/documentation/corefoundation/cgsize) for the aspect ratio.
 ```
 var body: some View {
 ...
-  Autograph(autograph, strokeColor: .blue)
+  Autograph($autograph.strokes)
               
   Button("Print") {
-      print("SVG output is: \n\(autograph.svg(on: CGSize(width: 2, height: 1)) ?? "nil")")
+      print("SVG output is: \n\(autograph.strokes.svg(on: CGSize(width: 2, height: 1)) ?? "nil")")
   }
 ...
 }
@@ -52,7 +48,11 @@ var body: some View {
 
 ## Rendering in SwiftUI
 
-To display the autograph in a view you can use the provided ``AutographShape`` implementation of [Shape](https://developer.apple.com/documentation/swiftui/shape) directly or use the ``path(in:)`` extension directly to create advanced shapes.
+To display the autograph in a view you can use the provided ``AutographShape`` implementation of [Shape](https://developer.apple.com/documentation/swiftui/shape), or use the ``path(in:)`` extension directly to create more advanced shapes.
+
+## ObservableObject (Pre SwiftData) usage
+
+Since the view accepts the type ``Binding<[[CGPoint]]`` any [``Published``](https://developer.apple.com/documentation/combine/published) reference of that type can be used by accesing its binding with the `$` operator.
 
 ## See also
 
