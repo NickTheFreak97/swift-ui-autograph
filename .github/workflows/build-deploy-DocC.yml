@@ -32,12 +32,23 @@ jobs:
         run: |
           swift package resolve;
           
-          swift package plugin --allow-writing-to-directory docs \
-                generate-documentation \
-                --disable-indexing \
-                --transform-for-static-hosting \
-                --hosting-base-path swift-ui-autograph \
-                --output-path docs        
+          xcodebuild docbuild -scheme Autograph-Package -derivedDataPath /tmp/docbuild;
+
+          echo "Archiving documentation..."
+                    
+          $(xcrun --find docc) process-archive \
+                      transform-for-static-hosting /tmp/docbuild/Build/Products/Debug-iphonesimulator/Autograph-Package.doccarchive \
+                      --output-path docs \
+                      --hosting-base-path swift-ui-autograph;
+                      
+          echo "** Archived documentation**"
+          
+#          swift package plugin --allow-writing-to-directory docs \
+#                generate-documentation \
+#                --disable-indexing \
+#                --transform-for-static-hosting \
+#                --hosting-base-path swift-ui-autograph \
+#                --output-path docs        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
