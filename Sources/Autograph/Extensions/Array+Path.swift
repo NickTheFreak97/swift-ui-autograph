@@ -55,9 +55,6 @@ public extension Array where Element == [CGPoint] {
         "L\(to.x) \(to.y) "
     }
     
-    private var maxX: CGFloat {
-        2
-    }
     /**
      Generates a string representation of the path as SVG
      - Parameters:
@@ -82,16 +79,11 @@ public extension Array where Element == [CGPoint] {
         
         """
         
-//        guard let firstPoint = strokes.first?.first else { return nil }
-        
         // Point transform from normalized form
         let transform = CGAffineTransform(scaleX: canvas.width, y: canvas.height)
         
         // String representation of the signature in SVG format
         var svg = xmlHeader + svgHeader // Add the SVG headers
-        
-        // Begin first path
-//        var path = pathHeader + move(to: firstPoint)
         
         forEach { stroke in
             if stroke.isEmpty {return} // Ignore empty

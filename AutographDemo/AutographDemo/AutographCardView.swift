@@ -46,30 +46,6 @@ struct AutographCardView: View {
     
 }
 
-/*
-extension Array where Element == [CGPoint] {
-    /// Useful for creating sample data from real data
-    func printPoints() {
-        print("[\n")
-        self.enumerated().forEach { index, stroke in
-            print("[")
-            stroke.enumerated().forEach { index, point in
-                print("CGPoint(x: \(point.x), y: \(point.y))")
-                if index != stroke.count - 1 {
-                    print(",")
-                }
-            }
-            print("]")
-            if index != stroke.count - 1 {
-                print(",\n")
-            }
-        }
-        print("]")
-
-    }
-}
-*/
-
 #Preview {
     MainActor.assumeIsolated {
         let container = previewContainer

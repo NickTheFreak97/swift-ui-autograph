@@ -46,6 +46,10 @@ var body: some View {
 }
 ```
 
+## Dependencies
+
+It has a dependency to my utility package [SwiftUIHelpers](https://github.com/jensmoes/swift-ui-helpers) for tracking the canvas size, as well as the [SwiftDocCPlugin](https://github.com/apple/swift-docc-plugin) for generating documentation.
+
 ## Rendering in SwiftUI
 
 To display the autograph in a view you can use the provided ``AutographShape`` implementation of [Shape](https://developer.apple.com/documentation/swiftui/shape), or use the ``path(in:)`` extension directly to create more advanced shapes.
