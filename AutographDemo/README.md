@@ -1,0 +1,2 @@
+# Autograph Example App
+Demonstrates usage of [Autograph](https://jensmoes.github.io/swift-ui-autograph/documentation/autograph/autograph/) using [SwiftData](https://developer.apple.com/documentation/swiftdata/), [NavigationStack](https://developer.apple.com/documentation/swiftui/navigationstack) and the [Observable](https://developer.apple.com/documentation/observation/observable) protocol to form a "fictional" autograph collectors app.
