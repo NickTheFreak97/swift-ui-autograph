@@ -29,7 +29,7 @@ A ``View`` can be constructed consisting of
     }
 
 ```
-
+You can capture the size of the canvas the autograph is being written on in realtime. Do this by providing a ``Binding<CGSize>`` to the intializers `canvasSize` parameter. 
 ## Output
 
 The package provides a simple SVG encoder as an extension to ``[[CGPoint]]``.
