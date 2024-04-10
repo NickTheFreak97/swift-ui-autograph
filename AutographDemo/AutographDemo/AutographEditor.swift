@@ -10,7 +10,7 @@ import Autograph
 
 struct AutographEditor: View {
     @State var card : AutoGraphCard = AutoGraphCard()
-    @State private var canvas: CGRect = .zero
+    @State private var canvas: CGSize = .zero
     @State private var boxSize: CGSize = .zero
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
@@ -97,8 +97,8 @@ struct AutographEditor: View {
             Button("Save") {
                 // Example of data capture.
                 modelContext.insert(card)
-                print("\(card.signature.count) strokes were made on canvas \(canvas.size):")
-                print("SVG output is: \n\(card.signature.svg(on: canvas.size) ?? "nil")")
+                print("\(card.signature.count) strokes were made on canvas \(canvas):")
+                print("SVG output is: \n\(card.signature.svg(on: canvas) ?? "nil")")
                 dismiss()
             }
             .if( card.name?.isEmpty ?? true || card.signature.isEmpty ) { button in

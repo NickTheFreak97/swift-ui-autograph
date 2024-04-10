@@ -17,7 +17,7 @@ public struct Autograph: View {
     /// - Parameter strokeWidth: The displayed with of the strokes. Defaults to 2.0
     /// - Parameter strokeColor: The color of the strokes. Defaults to black.
     public init(_ data: Binding<[[CGPoint]]>,
-                canvasSize: Binding<CGRect>? = nil,
+                canvasSize: Binding<CGSize>? = nil,
                 isActive: Binding<Bool>? = nil,
                 strokeWidth: CGFloat = 2.0,
                 strokeColor: Color = .black) {
@@ -25,22 +25,18 @@ public struct Autograph: View {
         self.canvasSize = canvasSize
         self.strokeColor = strokeColor
         self.strokeWidth = strokeWidth
+        // Initialize with provided data
+        self.viewModel = AutographViewModel(data: self.data)
     }
     
-    /// Adds a view under the created strokes.
-    /// - Parameter under: The view to display underneath the strokes. For example a dotted signature line, or a background.
-    public func underlay<U: View>(@ViewBuilder under: @escaping () -> U) -> some View {
-        ZStack {
-            under()
-            self
-        }
-    }
     /// The data representing the autograph in normalized form
     var data: Binding<[[CGPoint]]>
     /// Binding to the canvas size
-    var canvasSize: Binding<CGRect>?
+    var canvasSize: Binding<CGSize>?
     /// A binding to a boolean indicating drawing is in progress
     var isActive: Binding<Bool>?
+
+    private var viewModel: AutographViewModel
 
     /// The drawing canvas dimensions
     @State private var canvas: CGRect = .zero
@@ -73,9 +69,9 @@ public struct Autograph: View {
                     if isOutOfBounds {
                         // Case of returning from outside bounds.
                         // Insert a new stroke
-                        addPoint(value.location, from: canvas.size, isFirst: true)
+                        viewModel.addPoint(value.location, from: canvas.size, isFirst: true)
                     } else {
-                        addPoint(value.location, from: canvas.size, isFirst: value.location == value.startLocation)
+                        viewModel.addPoint(value.location, from: canvas.size, isFirst: value.location == value.startLocation)
                     }
                     // We are inside the bounds
                     isOutOfBounds = false
@@ -83,69 +79,21 @@ public struct Autograph: View {
                     // We are out of bounds
                     isOutOfBounds = true
                     // Treat this like the end of a stroke
-                    endStroke()
+                    viewModel.endStroke()
                 }
             }).onEnded({ value in
                 isActive?.wrappedValue = false
                 // Handle end of gesture
-                endStroke()
+                viewModel.endStroke()
             })
         )
         .geometry(frame: $canvas, in: .local)
         .onChange(of: canvas, perform: { newValue in
             // Map the canvas to external binding if provided
-            canvasSize?.wrappedValue = newValue
+            canvasSize?.wrappedValue = newValue.size
         })
     }
     
-    fileprivate func addPoint(_ point: CGPoint, from canvas: CGSize, isFirst: Bool = false) {
-        print("isFirst => \(isFirst)")
-        let transform = CGAffineTransform(scaleX: 1 / canvas.width, y: 1 / canvas.height)
-        let normalized = point.applying(transform)
-        // FIXME: See if we can do without this additional state
-//        if data.count == currentStroke {
-//            // New stroke add a new array
-//            data.wrappedValue.append([normalized])
-//        } else {
-//            data.wrappedValue[currentStroke].append(normalized)
-//        }
-        // If there is no data yet initialize with the first tentative stroke with one point in it
-        if data.isEmpty {
-            data.wrappedValue.append([normalized]) // First point
-            return
-        }
-        
-        // Find the last stroke
-        let lastIndex = data.wrappedValue.index(before: data.endIndex)
-        if isFirst {
-            if data.wrappedValue[lastIndex].count < 2 {
-                // Replace any single point strokes
-                data.wrappedValue[lastIndex] = [normalized]
-                print("Recycling last stroke (invalid)")
-            } else {
-                // Otherwise add a new stroke
-                data.wrappedValue.append([normalized])
-                print("Adding a new stroke")
-            }
-        } else {
-            // Add to the last stroke
-            data.wrappedValue[lastIndex].append(normalized)
-            print("Adding point to stroke \(lastIndex)")
-        }
-    }
-    /// Clean up activities after a stroke ends
-    fileprivate func endStroke() {
-//        currentStroke = currentStroke + 1
-        let lastIndex = data.wrappedValue.index(before: data.endIndex)
-
-        if let last = data.wrappedValue.last {
-            if last.count < 2 {
-                print("Removing last stroke (\(lastIndex)) with \(last.count) points")
-                data.wrappedValue.remove(at: lastIndex)
-            }
-        }
-        
-    }
 
 
 }

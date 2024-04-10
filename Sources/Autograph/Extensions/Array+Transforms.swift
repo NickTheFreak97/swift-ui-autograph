@@ -1,11 +1,10 @@
 //
 //
-//  Array+Path.swift
+//  Array+Transforms.swift
 //
 //
 //  Created by jensmoes on 11/8/23.
 //
-
 
 import Foundation
 import SwiftUI
