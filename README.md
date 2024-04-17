@@ -8,14 +8,14 @@ It accepts a [Binding](https://developer.apple.com/documentation/swiftui/binding
 The points are in normalized form allowing for projection onto arbitrary canvas sizes.
 
 For example if using a [SwiftData](https://developer.apple.com/documentation/swiftdata) backed model
-```
+```swift
 @Model
 class AutographCard {
     var strokes: [[CGPoint]]
 }
 ```
 A ``View`` can be constructed consisting of
-```
+```swift
     import SwiftData
     @Query private var autographs: [AutoGraphCard]
 
@@ -34,7 +34,7 @@ You can capture the size of the canvas the autograph is being written on in real
 
 The package provides a simple SVG encoder as an extension to ``[[CGPoint]]``.
 This can be used by calling ``svg(strokeWidth:strokeColor:on:)`` providing a [CGSize](https://developer.apple.com/documentation/corefoundation/cgsize) for the aspect ratio.
-```
+```swift
 var body: some View {
 ...
   Autograph($autograph.strokes)
