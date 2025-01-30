@@ -25,6 +25,7 @@ public struct Autograph: View {
         self.canvasSize = canvasSize
         self.strokeColor = strokeColor
         self.strokeWidth = strokeWidth
+        self.isActive = isActive
         // Initialize with provided data
         self.viewModel = AutographViewModel(data: self.data)
     }
